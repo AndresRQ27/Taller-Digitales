@@ -16,6 +16,6 @@ module SelectionZone (
   else
   	zone = 2'b11;
 
-endmodule // SelectionZone
+end
 
-endmodule
+endmodule// SelectionZone
