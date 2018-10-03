@@ -22,7 +22,7 @@ module ControllerSync #(parameter DATA_WIDTH = 4)(
     
   //Counter for the horizontal sync signal
   always_ff @(posedge clk or negedge reset) begin
-    if(~reset) begin
+    if(reset) begin
       hCounterSync <= "0000000000";
     end else if(clk) begin
       if(hCounterSync == hpixels-1) begin
@@ -45,7 +45,7 @@ module ControllerSync #(parameter DATA_WIDTH = 4)(
     //Horizontal Sync Pulse is loew when hCounter is 0 - 127
 
   always_ff @(posedge clk or negedge reset)
-    if(~reset) begin
+    if(reset) begin
       vCounterSync <= "0000000000";
     end else if (clk && vSyncEnable) begin
       //Increment when enabled
