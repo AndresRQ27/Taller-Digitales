@@ -14,14 +14,14 @@ module ControllerPainter (
   always_comb
     if(reset) begin
       if(vidOn) begin
-        sync_n <= 1;
-        blank_n <= 1;
+        sync_n <= 0;
+        blank_n <= 0;
         blue <= "00000000";
         green <= "00000000";
         red <= "00000000";
       end else begin
-        sync_n <= 0;
-        blank_n <= 0;
+        sync_n <= 1;
+        blank_n <= 1;
         blue <= color[23:16];
         green <= color[15:8];
         red <= color[7:0];
