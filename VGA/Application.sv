@@ -21,7 +21,7 @@ logic [23:0] colorReg4;
 
 ///loading and generating colors
 logic [1:0] machineState;
-logic [3:0] loadingColor;
+logic [3:0] clockColor;
 logic [23:0] newColor;
 
 ///selected color to paint
@@ -32,13 +32,13 @@ Counter colorgen(clk_in, reset_in, newColor);
 
 //machine state, chooses which color to store
 StateMachine machine(clk_in, swap_in, reset_in, machineState);
-Deco2a4 deco(machineState, loadingColor);
+Deco2a4 deco(machineState, clockColor);
 
 //storing colors
-ParalelRegister  #(24) color1(newColor, loadingColor[0], colorReg1);
-ParalelRegister  #(24) color2(newColor, loadingColor[1], colorReg2);
-ParalelRegister  #(24) color3(newColor, loadingColor[2], colorReg3);
-ParalelRegister  #(24) color4(newColor, loadingColor[3], colorReg4);
+ParalelRegister  #(24) color1(newColor, clockColor[0], colorReg1);
+ParalelRegister  #(24) color2(newColor, clockColor[1], colorReg2);
+ParalelRegister  #(24) color3(newColor, clockColor[2], colorReg3);
+ParalelRegister  #(24) color4(newColor, clockColor[3], colorReg4);
 
 //choosing the color to paint
 SelectionZone select(horizontal , vertical, reset_in, zone);
