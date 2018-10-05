@@ -11,7 +11,7 @@ module ControllerPainter (
   output blank_n
   );
 
-  always_comb
+  always_ff @(posedge reset, posedge vidOn) begin
     if(reset) begin
       if(vidOn) begin
         sync_n <= 0;
@@ -27,5 +27,6 @@ module ControllerPainter (
         red <= color[7:0];
       end // end else
     end // if(reset)
+	end
 
 endmodule

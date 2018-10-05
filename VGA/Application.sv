@@ -42,12 +42,6 @@ ParalelRegister  #(24) color4(newColor, clockColor[3], colorReg4);
 
 //choosing the color to paint
 SelectionZone select(horizontal , vertical, reset_in, zone);
-Multiplexer mux24b(colorReg1, colorReg2, colorReg3, colorReg4, zone, color);
-
-always_ff @(posedge reset_in) begin
-	if (reset_in)
-		color <= 0;
-end
-
+Multiplexer mux24b(colorReg1, colorReg2, colorReg3, colorReg4, zone, reset, color);
 
 endmodule

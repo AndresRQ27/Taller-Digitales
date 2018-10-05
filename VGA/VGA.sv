@@ -20,7 +20,7 @@ module VGA (
 	ControllerSync VGASync(clkDivided,~reset,
 		vga_hs,vga_vs,hCounter,vCounter,vidOn);
 		
-	Application VGAApplication(clkDivided,~reset,~swap,hCounter,vCounter,color);
+	Application VGAApplication(clk,~reset,~swap,hCounter,vCounter,color);
 		
 	ControllerPainter VGAPainter(vidOn,~reset,hCounter,vCounter,
 		color,blue,green,red,vga_sync_n,vga_blank_n);
