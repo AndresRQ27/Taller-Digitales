@@ -23,6 +23,6 @@ module VGA (
 	Application VGAApplication(clkDivided,~reset,~swap,hCounter,vCounter,color);
 		
 	ControllerPainter VGAPainter(vidOn,~reset,hCounter,vCounter,
-		color,blue,green.red.vga_sync_n,vga_blank_n);
+		color,blue,green,red,vga_sync_n,vga_blank_n);
 	
 endmodule
