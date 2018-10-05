@@ -20,3 +20,5 @@ VGA/output_files/
 *.qws
 
 MaquinaCafe/c5_pin_model_dump\.txt
+
+VGA/VGA_nativelink_simulation\.rpt
