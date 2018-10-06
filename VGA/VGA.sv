@@ -8,16 +8,17 @@ module VGA (
 	output logic [7:0] green,
 	output logic [7:0] blue,
 	output vga_sync_n,
-	output vga_blank_n
+	output vga_blank_n,
+	output clockVGA
 	);
 	
-	logic clkDivided, vidOn;
+	logic vidOn;
 	logic [9:0] hCounter, vCounter;
 	logic [23:0] color;
 	
-	ClkDivisor VGAClkDivisor(clk,~reset,clkDivided);
+	ClkDivisor VGAClkDivisor(clk,~reset,clockVGA);
 	
-	ControllerSync VGASync(clkDivided,~reset,
+	ControllerSync VGASync(clockVGA,~reset,
 		vga_hs,vga_vs,hCounter,vCounter,vidOn);
 		
 	Application VGAApplication(clk,~reset,~swap,hCounter,vCounter,color);

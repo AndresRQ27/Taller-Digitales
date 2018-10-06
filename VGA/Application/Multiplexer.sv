@@ -4,7 +4,7 @@ module Multiplexer #(parameter DATA_WIDTH=24) (input [DATA_WIDTH-1:0] function0,
 											input [DATA_WIDTH-1:0] function3,
 											input [1:0] selection, 
 											input reset,
-											output [DATA_WIDTH-1:0] y
+											output logic [DATA_WIDTH-1:0] y
 );
 	
 	logic [DATA_WIDTH-1:0] allFunctions [3:0];
