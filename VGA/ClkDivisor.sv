@@ -1,31 +1,23 @@
-module ClkDivisor #(parameter N = 2)(
-	input logic clock, 
-	input logic reset,
-	output logic newClock
+module ClkDivisor(
+	input logic clock,
+	output logic clk25Mhz
 	);
 
- logic[N - 1:0] count;
+ reg counter;
  
- always_ff @(posedge clock, posedge reset)
-  begin
-  
-   if(reset)
-    begin
-     count <= 0;
-     newClock <= 0;
-    end
-	 
-   else
-    begin
-     count <= count + 1;
-	  
-     if(count == 0)
-      begin
-       newClock <= !newClock;       
-      end
-     
-    end
-	 
-  end
+always @(posedge clock) 
+	begin
+		if(counter == 0)
+			begin
+				clk25Mhz = 1;
+				counter <= 1;
+			end
+		
+		else 
+			begin
+				clk25Mhz = 0;
+				counter <=0;
+			end
+	end
   
 endmodule
