@@ -1,2 +1,0 @@
-Info (10281): Verilog HDL Declaration information at Generador.sv(14): object "RGB" differs only in case from object "rgb" in the same scope File: C:/Users/andre/Downloads/Controlador VGA/Generador.sv Line: 14
-Warning (10268): Verilog HDL information at divisorFrecuencia.sv(15): always construct contains both blocking and non-blocking assignments File: C:/Users/andre/Downloads/Controlador VGA/divisorFrecuencia.sv Line: 15
