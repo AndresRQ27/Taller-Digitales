@@ -1,0 +1,59 @@
+|verificador
+dinero[0] => dinero[0].IN1
+dinero[1] => dinero[1].IN1
+dinero[2] => dinero[2].IN1
+dinero[3] => dinero[3].IN1
+cafe[0] => Equal0.IN0
+cafe[0] => Equal1.IN3
+cafe[0] => Equal2.IN3
+cafe[1] => Equal0.IN3
+cafe[1] => Equal1.IN0
+cafe[1] => Equal2.IN2
+cafe[2] => Equal0.IN2
+cafe[2] => Equal1.IN2
+cafe[2] => Equal2.IN0
+cafe[3] => Equal0.IN1
+cafe[3] => Equal1.IN1
+cafe[3] => Equal2.IN1
+cancelar => iniciarProceso.IN1
+vuelto[0] << vuelto.DB_MAX_OUTPUT_PORT_TYPE
+vuelto[1] << vuelto.DB_MAX_OUTPUT_PORT_TYPE
+vuelto[2] << vuelto.DB_MAX_OUTPUT_PORT_TYPE
+vuelto[3] << vuelto.DB_MAX_OUTPUT_PORT_TYPE
+iniciarProceso << iniciarProceso.DB_MAX_OUTPUT_PORT_TYPE
+tipoCafe[0] << tipoCafe.DB_MAX_OUTPUT_PORT_TYPE
+tipoCafe[1] << tipoCafe.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|verificador|adder:costo
+a[0] => _.DATAD
+a[1] => _.DATAD
+a[2] => _.DATAD
+a[3] => O.IN0
+a[3] => O.IN0
+a[3] => _.DATAD
+b[0] => bb[0].DATAA
+b[0] => bb[0].DATAB
+b[1] => bb[1].DATAA
+b[1] => bb[1].DATAB
+b[2] => bb[2].DATAA
+b[2] => bb[2].DATAB
+b[3] => bb[3].DATAA
+b[3] => O.IN1
+b[3] => bb[3].DATAB
+b[3] => O.IN1
+cin => bb[3].OUTPUTSELECT
+cin => bb[2].OUTPUTSELECT
+cin => bb[1].OUTPUTSELECT
+cin => bb[0].OUTPUTSELECT
+cin => _.DATAB
+s[0] <= _.SUM_OUT
+s[1] <= _.SUM_OUT
+s[2] <= _.SUM_OUT
+s[3] <= _.SUM_OUT
+N <= _.SUM_OUT
+Z <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= _.SUM_OUT
+O <= O.DB_MAX_OUTPUT_PORT_TYPE
+
+
