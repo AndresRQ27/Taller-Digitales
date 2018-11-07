@@ -1,26 +1,2 @@
 
-*.bak
-
-MaquinaCafe/simulation/
-
-MaquinaCafe/output_files/
-
-MaquinaCafe/incremental_db/
-
-MaquinaCafe/db/
-
-VGA/db/
-
-VGA/incremental_db/
-
-VGA/output_files/
-
-*.qsf
-
-*.qws
-
-MaquinaCafe/c5_pin_model_dump\.txt
-
-VGA/VGA_nativelink_simulation\.rpt
-
-VGA/c5_pin_model_dump\.txt
+vga2\.0/

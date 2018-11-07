@@ -20,7 +20,6 @@ module System(
 //------------------------------------------
 wire [9:0] px, py;
 wire [7:0] rgb;
-wire [10:0] dir;
 wire [31:0] dato;
 //------------------------------------------
 //DECLARACION DE VARIABLES
@@ -48,22 +47,16 @@ Generador generador(
 		.pixelX(px), 
 		.pixelY(py),
 		.dato(dato),
-		.dir(dir), 
-		.RGB(rgb)	
+		.red(red),
+		.green(green),
+		.blue(blue)
 );
 
 memoria memoria(
 		.clk(clock),
-		.dir(dir),
+		.pixelX(px),
+		.pixelY(py),
 		.dato(dato)
 );
-
-//------------------------------------------
-//INSTANCIAS
-//------------------------------------------
-
-assign red = rgb;
-assign green = rgb;
-assign blue = rgb;
 
 endmodule

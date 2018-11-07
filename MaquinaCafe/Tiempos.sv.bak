@@ -1,0 +1,38 @@
+module Tiempos (	
+	input [1:0] cafe, 	// Cafes
+	input clock_r,  	// Clock reducido a una frecuencia de aproximadamente 1Hz
+	input [2:0] maquina ,	// Estados de la maquina
+	output logic [1:0] tiempo 	// Tiempo de salida para 
+);
+
+
+	always_comb
+		if((maquina == 3'b000) & (cafe == 2'b11))
+			tiempo <= 2'b01;
+		else if(maquina == 3'b000)
+			tiempo <= 2'b10;
+		else if((maquina == 3'b001) & (cafe == 2'b00))
+			tiempo <= 2'b11;
+		else if((maquina == 3'b001) & (cafe == 2'b01))
+			tiempo <= 2'b10;
+		else if(maquina == 3'b001) 
+			tiempo <= 2'b01;
+		else if((maquina == 3'b010) & (cafe == 2'b00))
+			tiempo <= 2'b00;
+		else if((maquina == 3'b010) & (cafe == 2'b10))
+			tiempo <= 2'b10;
+		else if(maquina == 3'b010)
+			tiempo <= 2'b01;
+		else if((maquina == 3'b011) & (cafe == 2'b11))
+			tiempo <= 2'b10;
+		else if(maquina == 3'b011)
+			tiempo <= 2'b00;
+		else if(maquina == 3'b100) 
+			tiempo <= 2'b01;
+		else 
+			tiempo <= 2'b00;
+
+
+
+
+endmodule

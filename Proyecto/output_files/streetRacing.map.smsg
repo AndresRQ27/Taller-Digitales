@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at divisorFrecuencia.sv(15): always construct contains both blocking and non-blocking assignments File: C:/Users/andre/Documents/TEC/Taller-Digitales/Proyecto/VGA/divisorFrecuencia.sv Line: 15
