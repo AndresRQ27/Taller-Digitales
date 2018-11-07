@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProcessorArm
-Sun Nov 04 01:26:52 2018
+Tue Nov 06 20:56:51 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -15,37 +15,38 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
   9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: controller:c|condlogic:cl|flopenr:flagreg1
- 13. Parameter Settings for User Entity Instance: controller:c|condlogic:cl|flopenr:flagreg0
- 14. Parameter Settings for User Entity Instance: datapath:dp|mux2:pcmux
- 15. Parameter Settings for User Entity Instance: datapath:dp|flopr:pcreg
- 16. Parameter Settings for User Entity Instance: datapath:dp|adder:pcadd1
- 17. Parameter Settings for User Entity Instance: datapath:dp|adder:pcadd2
- 18. Parameter Settings for User Entity Instance: datapath:dp|mux2:ra1mux
- 19. Parameter Settings for User Entity Instance: datapath:dp|mux2:ra2mux
- 20. Parameter Settings for User Entity Instance: datapath:dp|mux2:resmux
- 21. Parameter Settings for User Entity Instance: datapath:dp|mux2:srcbmux
- 22. Parameter Settings for User Entity Instance: datapath:dp|ALU:alu
- 23. Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|sumadorNbits:sumaN
- 24. Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|restadorNbits:restador
- 25. Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|andN:andgate
- 26. Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|orN:orgate
- 27. Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|sllN:shiftL
- 28. Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|srlN:shiftR
- 29. Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|xorN:xorgate
- 30. Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|notN:notgate
- 31. Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|MUX:muxresult
- 32. Port Connectivity Checks: "datapath:dp|ALU:alu|sumadorNbits:sumaN"
- 33. Port Connectivity Checks: "datapath:dp|ALU:alu"
- 34. Port Connectivity Checks: "datapath:dp|mux2:ra1mux"
- 35. Port Connectivity Checks: "datapath:dp|adder:pcadd2"
- 36. Port Connectivity Checks: "datapath:dp|adder:pcadd1"
- 37. Post-Synthesis Netlist Statistics for Top Partition
- 38. Elapsed Time Per Partition
- 39. Analysis & Synthesis Messages
- 40. Analysis & Synthesis Suppressed Messages
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: arm:arm|controller:c|condlogic:cl|flopenr:flagreg1
+ 14. Parameter Settings for User Entity Instance: arm:arm|controller:c|condlogic:cl|flopenr:flagreg0
+ 15. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:pcmux
+ 16. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|flopr:pcreg
+ 17. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|adder:pcadd1
+ 18. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|adder:pcadd2
+ 19. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:ra1mux
+ 20. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:ra2mux
+ 21. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:resmux
+ 22. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:srcbmux
+ 23. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu
+ 24. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN
+ 25. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|restadorNbits:restador
+ 26. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|andN:andgate
+ 27. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|orN:orgate
+ 28. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|sllN:shiftL
+ 29. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|srlN:shiftR
+ 30. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|xorN:xorgate
+ 31. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|notN:notgate
+ 32. Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|MUX:muxresult
+ 33. Port Connectivity Checks: "arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN"
+ 34. Port Connectivity Checks: "arm:arm|datapath:dp|ALU:alu"
+ 35. Port Connectivity Checks: "arm:arm|datapath:dp|mux2:ra1mux"
+ 36. Port Connectivity Checks: "arm:arm|datapath:dp|adder:pcadd2"
+ 37. Port Connectivity Checks: "arm:arm|datapath:dp|adder:pcadd1"
+ 38. Post-Synthesis Netlist Statistics for Top Partition
+ 39. Elapsed Time Per Partition
+ 40. Analysis & Synthesis Messages
+ 41. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -71,14 +72,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Nov 04 01:26:52 2018       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 06 20:56:50 2018       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; ProcessorArm                                ;
-; Top-level Entity Name           ; arm                                         ;
+; Top-level Entity Name           ; top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 515                                         ;
-; Total pins                      ; 163                                         ;
+; Total registers                 ; 2562                                        ;
+; Total pins                      ; 67                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -97,7 +98,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; arm                ; ProcessorArm       ;
+; Top-level entity name                                                           ; top                ; ProcessorArm       ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -195,35 +196,39 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
-; ALU/xorN.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/xorN.sv          ;         ;
-; ALU/sumadorNbits.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/sumadorNbits.sv  ;         ;
-; ALU/sumador1bit.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/sumador1bit.sv   ;         ;
-; ALU/srlN.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/srlN.sv          ;         ;
-; ALU/sllN.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/sllN.sv          ;         ;
-; ALU/restadorNbits.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/restadorNbits.sv ;         ;
-; ALU/orN.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/orN.sv           ;         ;
-; ALU/notN.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/notN.sv          ;         ;
-; ALU/MUX.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/MUX.sv           ;         ;
-; ALU/andN.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/andN.sv          ;         ;
-; ALU/ALU.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv           ;         ;
-; arm.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/arm.sv               ;         ;
-; controller.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/controller.sv        ;         ;
-; decoder.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/decoder.sv           ;         ;
-; condcheck.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/condcheck.sv         ;         ;
-; condlogic.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/condlogic.sv         ;         ;
-; datapath.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/datapath.sv          ;         ;
-; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/regfile.sv           ;         ;
-; adder.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/adder.sv             ;         ;
-; extend.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/extend.sv            ;         ;
-; flopr.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/flopr.sv             ;         ;
-; flopenr.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/flopenr.sv           ;         ;
-; mux2.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/mux2.sv              ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                    ;
++----------------------------------+-----------------+---------------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                   ; File Name with Absolute Path                                                                 ; Library ;
++----------------------------------+-----------------+---------------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; Memory/imem.sv                   ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/Memory/imem.sv       ;         ;
+; Memory/dmem.sv                   ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/Memory/dmem.sv       ;         ;
+; ALU/xorN.sv                      ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/xorN.sv          ;         ;
+; ALU/sumadorNbits.sv              ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/sumadorNbits.sv  ;         ;
+; ALU/sumador1bit.sv               ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/sumador1bit.sv   ;         ;
+; ALU/srlN.sv                      ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/srlN.sv          ;         ;
+; ALU/sllN.sv                      ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/sllN.sv          ;         ;
+; ALU/restadorNbits.sv             ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/restadorNbits.sv ;         ;
+; ALU/orN.sv                       ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/orN.sv           ;         ;
+; ALU/notN.sv                      ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/notN.sv          ;         ;
+; ALU/MUX.sv                       ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/MUX.sv           ;         ;
+; ALU/andN.sv                      ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/andN.sv          ;         ;
+; ALU/ALU.sv                       ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv           ;         ;
+; arm.sv                           ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/arm.sv               ;         ;
+; controller.sv                    ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/controller.sv        ;         ;
+; decoder.sv                       ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/decoder.sv           ;         ;
+; condcheck.sv                     ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/condcheck.sv         ;         ;
+; condlogic.sv                     ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/condlogic.sv         ;         ;
+; datapath.sv                      ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/datapath.sv          ;         ;
+; regfile.sv                       ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/regfile.sv           ;         ;
+; adder.sv                         ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/adder.sv             ;         ;
+; extend.sv                        ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/extend.sv            ;         ;
+; flopr.sv                         ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/flopr.sv             ;         ;
+; flopenr.sv                       ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/flopenr.sv           ;         ;
+; mux2.sv                          ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/mux2.sv              ;         ;
+; top.sv                           ; yes             ; User SystemVerilog HDL File                 ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/top.sv               ;         ;
+; memory/memfile.hex               ; yes             ; Auto-Found Hexadecimal (Intel-Format) File  ; C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/memory/memfile.hex   ;         ;
++----------------------------------+-----------------+---------------------------------------------+----------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -231,108 +236,119 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 617       ;
+; Estimate of Logic utilization (ALMs needed) ; 1932      ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 788       ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 396       ;
-;     -- 5 input functions                    ; 108       ;
-;     -- 4 input functions                    ; 31        ;
-;     -- <=3 input functions                  ; 253       ;
+; Combinational ALUT usage for logic          ; 1565      ;
+;     -- 7 input functions                    ; 4         ;
+;     -- 6 input functions                    ; 1101      ;
+;     -- 5 input functions                    ; 109       ;
+;     -- 4 input functions                    ; 67        ;
+;     -- <=3 input functions                  ; 284       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 515       ;
+; Dedicated logic registers                   ; 2562      ;
 ;                                             ;           ;
-; I/O pins                                    ; 163       ;
+; I/O pins                                    ; 67        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 515       ;
-; Total fan-out                               ; 5569      ;
-; Average fan-out                             ; 3.42      ;
+; Maximum fan-out                             ; 2562      ;
+; Total fan-out                               ; 16056     ;
+; Average fan-out                             ; 3.77      ;
 +---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                               ;
-+------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node                           ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                ; Entity Name   ; Library Name ;
-+------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------+---------------+--------------+
-; |arm                                                 ; 788 (0)             ; 515 (0)                   ; 0                 ; 0          ; 163  ; 0            ; |arm                                                                               ; arm           ; work         ;
-;    |controller:c|                                    ; 18 (0)              ; 3 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|controller:c                                                                  ; controller    ; work         ;
-;       |condlogic:cl|                                 ; 11 (5)              ; 3 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|controller:c|condlogic:cl                                                     ; condlogic     ; work         ;
-;          |condcheck:cc|                              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|controller:c|condlogic:cl|condcheck:cc                                        ; condcheck     ; work         ;
-;          |flopenr:flagreg0|                          ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|controller:c|condlogic:cl|flopenr:flagreg0                                    ; flopenr       ; work         ;
-;          |flopenr:flagreg1|                          ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|controller:c|condlogic:cl|flopenr:flagreg1                                    ; flopenr       ; work         ;
-;       |decoder:dec|                                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|controller:c|decoder:dec                                                      ; decoder       ; work         ;
-;    |datapath:dp|                                     ; 770 (0)             ; 512 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp                                                                   ; datapath      ; work         ;
-;       |ALU:alu|                                      ; 211 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu                                                           ; ALU           ; work         ;
-;          |MUX:muxresult|                             ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|MUX:muxresult                                             ; MUX           ; work         ;
-;          |andN:andgate|                              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|andN:andgate                                              ; andN          ; work         ;
-;          |restadorNbits:restador|                    ; 88 (88)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|restadorNbits:restador                                    ; restadorNbits ; work         ;
-;          |sumadorNbits:sumaN|                        ; 90 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN                                        ; sumadorNbits  ; work         ;
-;             |sumador1bit:sumador_completo[10].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[10].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[11].sumai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[11].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[12].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[12].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[13].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[13].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[14].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[14].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[15].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[15].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[16].sumai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[16].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[17].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[17].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[18].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[18].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[19].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[19].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[1].sumai|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[1].sumai  ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[20].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[20].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[21].sumai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[21].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[22].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[22].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[23].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[23].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[24].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[24].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[25].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[25].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[26].sumai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[26].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[27].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[27].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[28].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[28].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[29].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[29].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[2].sumai|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[2].sumai  ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[30].sumai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[30].sumai ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[3].sumai|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[3].sumai  ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[4].sumai|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[4].sumai  ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[5].sumai|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[5].sumai  ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[6].sumai|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[6].sumai  ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[7].sumai|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[7].sumai  ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[8].sumai|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[8].sumai  ; sumador1bit   ; work         ;
-;             |sumador1bit:sumador_completo[9].sumai|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[9].sumai  ; sumador1bit   ; work         ;
-;       |adder:pcadd1|                                 ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|adder:pcadd1                                                      ; adder         ; work         ;
-;       |adder:pcadd2|                                 ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|adder:pcadd2                                                      ; adder         ; work         ;
-;       |flopr:pcreg|                                  ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|flopr:pcreg                                                       ; flopr         ; work         ;
-;       |mux2:ra1mux|                                  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|mux2:ra1mux                                                       ; mux2          ; work         ;
-;       |mux2:ra2mux|                                  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|mux2:ra2mux                                                       ; mux2          ; work         ;
-;       |mux2:resmux|                                  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|mux2:resmux                                                       ; mux2          ; work         ;
-;       |mux2:srcbmux|                                 ; 57 (57)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|mux2:srcbmux                                                      ; mux2          ; work         ;
-;       |regfile:rf|                                   ; 402 (402)           ; 480 (480)                 ; 0                 ; 0          ; 0    ; 0            ; |arm|datapath:dp|regfile:rf                                                        ; regfile       ; work         ;
-+------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------+---------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                          ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                        ; Entity Name   ; Library Name ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------+---------------+--------------+
+; |top                                                    ; 1565 (0)            ; 2562 (0)                  ; 0                 ; 0          ; 67   ; 0            ; |top                                                                                       ; top           ; work         ;
+;    |arm:arm|                                            ; 750 (0)             ; 514 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm                                                                               ; arm           ; work         ;
+;       |controller:c|                                    ; 12 (0)              ; 2 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|controller:c                                                                  ; controller    ; work         ;
+;          |condlogic:cl|                                 ; 6 (4)               ; 2 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|controller:c|condlogic:cl                                                     ; condlogic     ; work         ;
+;             |condcheck:cc|                              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|controller:c|condlogic:cl|condcheck:cc                                        ; condcheck     ; work         ;
+;             |flopenr:flagreg1|                          ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|controller:c|condlogic:cl|flopenr:flagreg1                                    ; flopenr       ; work         ;
+;          |decoder:dec|                                  ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|controller:c|decoder:dec                                                      ; decoder       ; work         ;
+;       |datapath:dp|                                     ; 738 (0)             ; 512 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp                                                                   ; datapath      ; work         ;
+;          |ALU:alu|                                      ; 178 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu                                                           ; ALU           ; work         ;
+;             |MUX:muxresult|                             ; 35 (35)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|MUX:muxresult                                             ; MUX           ; work         ;
+;             |andN:andgate|                              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|andN:andgate                                              ; andN          ; work         ;
+;             |restadorNbits:restador|                    ; 72 (72)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|restadorNbits:restador                                    ; restadorNbits ; work         ;
+;             |sumadorNbits:sumaN|                        ; 68 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN                                        ; sumadorNbits  ; work         ;
+;                |sumador1bit:sumador_completo[10].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[10].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[11].sumai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[11].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[12].sumai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[12].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[13].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[13].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[14].sumai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[14].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[15].sumai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[15].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[16].sumai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[16].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[17].sumai| ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[17].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[18].sumai| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[18].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[19].sumai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[19].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[1].sumai|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[1].sumai  ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[20].sumai| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[20].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[21].sumai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[21].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[22].sumai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[22].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[23].sumai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[23].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[24].sumai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[24].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[25].sumai| ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[25].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[27].sumai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[27].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[29].sumai| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[29].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[2].sumai|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[2].sumai  ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[30].sumai| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[30].sumai ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[3].sumai|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[3].sumai  ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[4].sumai|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[4].sumai  ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[5].sumai|  ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[5].sumai  ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[6].sumai|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[6].sumai  ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[7].sumai|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[7].sumai  ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[8].sumai|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[8].sumai  ; sumador1bit   ; work         ;
+;                |sumador1bit:sumador_completo[9].sumai|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[9].sumai  ; sumador1bit   ; work         ;
+;          |adder:pcadd1|                                 ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|adder:pcadd1                                                      ; adder         ; work         ;
+;          |adder:pcadd2|                                 ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|adder:pcadd2                                                      ; adder         ; work         ;
+;          |flopr:pcreg|                                  ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|flopr:pcreg                                                       ; flopr         ; work         ;
+;          |mux2:ra1mux|                                  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|mux2:ra1mux                                                       ; mux2          ; work         ;
+;          |mux2:ra2mux|                                  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|mux2:ra2mux                                                       ; mux2          ; work         ;
+;          |mux2:resmux|                                  ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|mux2:resmux                                                       ; mux2          ; work         ;
+;          |mux2:srcbmux|                                 ; 53 (53)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|mux2:srcbmux                                                      ; mux2          ; work         ;
+;          |regfile:rf|                                   ; 407 (407)           ; 480 (480)                 ; 0                 ; 0          ; 0    ; 0            ; |top|arm:arm|datapath:dp|regfile:rf                                                        ; regfile       ; work         ;
+;    |dmem:dmem|                                          ; 798 (798)           ; 2048 (2048)               ; 0                 ; 0          ; 0    ; 0            ; |top|dmem:dmem                                                                             ; dmem          ; work         ;
+;    |imem:imem|                                          ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|imem:imem                                                                             ; imem          ; work         ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                              ;
-+-----------------------------------------------------+---------------------------------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal                               ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------------------------------------+------------------------+
-; datapath:dp|ALU:alu|restadorNbits:restador|zero     ; GND                                               ; yes                    ;
-; datapath:dp|ALU:alu|restadorNbits:restador|negativo ; datapath:dp|ALU:alu|restadorNbits:restador|Equal0 ; yes                    ;
-; Number of user-specified and inferred latches = 2   ;                                                   ;                        ;
-+-----------------------------------------------------+---------------------------------------------------+------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                              ;
++-------------------------------------------------------------+-----------------------------------------------------------+------------------------+
+; Latch Name                                                  ; Latch Enable Signal                                       ; Free of Timing Hazards ;
++-------------------------------------------------------------+-----------------------------------------------------------+------------------------+
+; arm:arm|datapath:dp|ALU:alu|restadorNbits:restador|zero     ; GND                                                       ; yes                    ;
+; arm:arm|datapath:dp|ALU:alu|restadorNbits:restador|negativo ; arm:arm|datapath:dp|ALU:alu|restadorNbits:restador|Equal0 ; yes                    ;
+; Number of user-specified and inferred latches = 2           ;                                                           ;                        ;
++-------------------------------------------------------------+-----------------------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                       ;
-+-------------------------------------------------+----------------------------------------+
-; Register name                                   ; Reason for Removal                     ;
-+-------------------------------------------------+----------------------------------------+
-; controller:c|condlogic:cl|flopenr:flagreg0|q[0] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1           ;                                        ;
-+-------------------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                               ;
++---------------------------------------------------------+----------------------------------------+
+; Register name                                           ; Reason for Removal                     ;
++---------------------------------------------------------+----------------------------------------+
+; arm:arm|controller:c|condlogic:cl|flopenr:flagreg0|q[0] ; Stuck at GND due to stuck port data_in ;
+; arm:arm|controller:c|condlogic:cl|flopenr:flagreg0|q[1] ; Lost fanout                            ;
+; Total Number of Removed Registers = 2                   ;                                        ;
++---------------------------------------------------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                   ;
++---------------------------------------------------------+---------------------------+---------------------------------------------------------+
+; Register name                                           ; Reason for Removal        ; Registers Removed due to This Register                  ;
++---------------------------------------------------------+---------------------------+---------------------------------------------------------+
+; arm:arm|controller:c|condlogic:cl|flopenr:flagreg0|q[0] ; Stuck at GND              ; arm:arm|controller:c|condlogic:cl|flopenr:flagreg0|q[1] ;
+;                                                         ; due to stuck port data_in ;                                                         ;
++---------------------------------------------------------+---------------------------+---------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -340,231 +356,230 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 515   ;
+; Total registers                              ; 2562  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 30    ;
-; Number of registers using Asynchronous Clear ; 35    ;
+; Number of registers using Asynchronous Clear ; 34    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 484   ;
+; Number of registers using Clock Enable       ; 2532  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |arm|datapath:dp|mux2:srcbmux|y[16]           ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |arm|datapath:dp|mux2:srcbmux|y[0]            ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |arm|datapath:dp|mux2:srcbmux|y[3]            ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |arm|datapath:dp|ALU:alu|MUX:muxresult|result ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |arm|datapath:dp|mux2:srcbmux|y[9]            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |top|arm:arm|datapath:dp|mux2:srcbmux|y[14]           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|arm:arm|datapath:dp|mux2:srcbmux|y[1]            ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |top|arm:arm|datapath:dp|mux2:srcbmux|y[5]            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top|arm:arm|datapath:dp|ALU:alu|MUX:muxresult|result ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: controller:c|condlogic:cl|flopenr:flagreg1 ;
-+----------------+-------+----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                           ;
-+----------------+-------+----------------------------------------------------------------+
-; WIDTH          ; 2     ; Signed Integer                                                 ;
-+----------------+-------+----------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|controller:c|condlogic:cl|flopenr:flagreg1 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; WIDTH          ; 2     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: controller:c|condlogic:cl|flopenr:flagreg0 ;
-+----------------+-------+----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                           ;
-+----------------+-------+----------------------------------------------------------------+
-; WIDTH          ; 2     ; Signed Integer                                                 ;
-+----------------+-------+----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|mux2:pcmux ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                             ;
-+----------------+-------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|flopr:pcreg ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|adder:pcadd1 ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|adder:pcadd2 ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|mux2:ra1mux ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|mux2:ra2mux ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|mux2:resmux ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|mux2:srcbmux ;
-+----------------+-------+----------------------------------------------+
-; Parameter Name ; Value ; Type                                         ;
-+----------------+-------+----------------------------------------------+
-; WIDTH          ; 32    ; Signed Integer                               ;
-+----------------+-------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|ALU:alu ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; width          ; 32    ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|sumadorNbits:sumaN ;
-+----------------+-------+------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                       ;
-+----------------+-------+------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                             ;
-+----------------+-------+------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|restadorNbits:restador ;
-+----------------+-------+----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                           ;
-+----------------+-------+----------------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                                 ;
-+----------------+-------+----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|andN:andgate ;
-+----------------+-------+------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                 ;
-+----------------+-------+------------------------------------------------------+
-; width          ; 32    ; Signed Integer                                       ;
-+----------------+-------+------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|controller:c|condlogic:cl|flopenr:flagreg0 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; WIDTH          ; 2     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|orN:orgate ;
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:pcmux ;
 +----------------+-------+----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                               ;
 +----------------+-------+----------------------------------------------------+
-; width          ; 32    ; Signed Integer                                     ;
+; WIDTH          ; 32    ; Signed Integer                                     ;
 +----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|sllN:shiftL ;
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|flopr:pcreg ;
 +----------------+-------+-----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                ;
 +----------------+-------+-----------------------------------------------------+
-; width          ; 32    ; Signed Integer                                      ;
+; WIDTH          ; 32    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|adder:pcadd1 ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|adder:pcadd2 ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:ra1mux ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                      ;
 +----------------+-------+-----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|srlN:shiftR ;
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:ra2mux ;
 +----------------+-------+-----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                ;
 +----------------+-------+-----------------------------------------------------+
-; width          ; 32    ; Signed Integer                                      ;
+; WIDTH          ; 4     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:resmux ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                      ;
 +----------------+-------+-----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|xorN:xorgate ;
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|mux2:srcbmux ;
 +----------------+-------+------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                 ;
 +----------------+-------+------------------------------------------------------+
-; N              ; 32    ; Signed Integer                                       ;
+; WIDTH          ; 32    ; Signed Integer                                       ;
 +----------------+-------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|notN:notgate ;
-+----------------+-------+------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                 ;
-+----------------+-------+------------------------------------------------------+
-; width          ; 32    ; Signed Integer                                       ;
-+----------------+-------+------------------------------------------------------+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; width          ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|ALU:alu|MUX:muxresult ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; width          ; 32    ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|restadorNbits:restador ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|andN:andgate ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|orN:orgate ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|sllN:shiftL ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|srlN:shiftR ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|xorN:xorgate ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|notN:notgate ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: arm:arm|datapath:dp|ALU:alu|MUX:muxresult ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:dp|ALU:alu|sumadorNbits:sumaN"                                                                                                                                              ;
+; Port Connectivity Checks: "arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN"                                                                                                                                      ;
 +---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
 +---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -574,7 +589,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:dp|ALU:alu"                                                                                                                              ;
+; Port Connectivity Checks: "arm:arm|datapath:dp|ALU:alu"                                                                                                                      ;
 +---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port    ; Type  ; Severity ; Details                                                                                                                                         ;
 +---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -582,35 +597,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Port Connectivity Checks: "datapath:dp|mux2:ra1mux" ;
-+------+-------+----------+---------------------------+
-; Port ; Type  ; Severity ; Details                   ;
-+------+-------+----------+---------------------------+
-; d1   ; Input ; Info     ; Stuck at VCC              ;
-+------+-------+----------+---------------------------+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "arm:arm|datapath:dp|mux2:ra1mux" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; d1   ; Input ; Info     ; Stuck at VCC                      ;
++------+-------+----------+-----------------------------------+
 
 
-+------------------------------------------------------+
-; Port Connectivity Checks: "datapath:dp|adder:pcadd2" ;
-+----------+-------+----------+------------------------+
-; Port     ; Type  ; Severity ; Details                ;
-+----------+-------+----------+------------------------+
-; b[31..3] ; Input ; Info     ; Stuck at GND           ;
-; b[1..0]  ; Input ; Info     ; Stuck at GND           ;
-; b[2]     ; Input ; Info     ; Stuck at VCC           ;
-+----------+-------+----------+------------------------+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "arm:arm|datapath:dp|adder:pcadd2" ;
++----------+-------+----------+--------------------------------+
+; Port     ; Type  ; Severity ; Details                        ;
++----------+-------+----------+--------------------------------+
+; b[31..3] ; Input ; Info     ; Stuck at GND                   ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND                   ;
+; b[2]     ; Input ; Info     ; Stuck at VCC                   ;
++----------+-------+----------+--------------------------------+
 
 
-+------------------------------------------------------+
-; Port Connectivity Checks: "datapath:dp|adder:pcadd1" ;
-+----------+-------+----------+------------------------+
-; Port     ; Type  ; Severity ; Details                ;
-+----------+-------+----------+------------------------+
-; b[31..3] ; Input ; Info     ; Stuck at GND           ;
-; b[1..0]  ; Input ; Info     ; Stuck at GND           ;
-; b[2]     ; Input ; Info     ; Stuck at VCC           ;
-+----------+-------+----------+------------------------+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "arm:arm|datapath:dp|adder:pcadd1" ;
++----------+-------+----------+--------------------------------+
+; Port     ; Type  ; Severity ; Details                        ;
++----------+-------+----------+--------------------------------+
+; b[31..3] ; Input ; Info     ; Stuck at GND                   ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND                   ;
+; b[2]     ; Input ; Info     ; Stuck at VCC                   ;
++----------+-------+----------+--------------------------------+
 
 
 +-----------------------------------------------------+
@@ -618,29 +633,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 515                         ;
-;     CLR               ; 1                           ;
+; arriav_ff             ; 2562                        ;
 ;     CLR SLD           ; 30                          ;
-;     ENA               ; 480                         ;
+;     ENA               ; 2528                        ;
 ;     ENA CLR           ; 4                           ;
-; arriav_lcell_comb     ; 788                         ;
+; arriav_lcell_comb     ; 1565                        ;
 ;     arith             ; 93                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 60                          ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 1                           ;
 ;         4 data inputs ; 4                           ;
-;         5 data inputs ; 26                          ;
-;     normal            ; 695                         ;
-;         2 data inputs ; 65                          ;
-;         3 data inputs ; 125                         ;
-;         4 data inputs ; 27                          ;
-;         5 data inputs ; 82                          ;
-;         6 data inputs ; 396                         ;
-; boundary_port         ; 163                         ;
+;         5 data inputs ; 28                          ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 1468                        ;
+;         2 data inputs ; 92                          ;
+;         3 data inputs ; 131                         ;
+;         4 data inputs ; 63                          ;
+;         5 data inputs ; 81                          ;
+;         6 data inputs ; 1101                        ;
+; boundary_port         ; 67                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 19.00                       ;
-; Average LUT depth     ; 12.88                       ;
+; Max LUT depth         ; 17.00                       ;
+; Average LUT depth     ; 8.03                        ;
 +-----------------------+-----------------------------+
 
 
@@ -649,7 +663,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -659,7 +673,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sun Nov 04 01:26:19 2018
+    Info: Processing started: Tue Nov 06 20:56:18 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProcessorArm -c ProcessorArm
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -718,50 +732,61 @@ Info (12021): Found 1 design units, including 1 entities, in source file top.sv
     Info (12023): Found entity 1: top File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/top.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
     Info (12023): Found entity 1: testbench File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/testbench.sv Line: 1
-Info (12127): Elaborating entity "arm" for the top level hierarchy
-Info (12128): Elaborating entity "controller" for hierarchy "controller:c" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/arm.sv Line: 13
-Info (12128): Elaborating entity "decoder" for hierarchy "controller:c|decoder:dec" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/controller.sv Line: 16
-Info (12128): Elaborating entity "condlogic" for hierarchy "controller:c|condlogic:cl" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/controller.sv Line: 19
-Info (12128): Elaborating entity "flopenr" for hierarchy "controller:c|condlogic:cl|flopenr:flagreg1" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/condlogic.sv Line: 13
-Info (12128): Elaborating entity "condcheck" for hierarchy "controller:c|condlogic:cl|condcheck:cc" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/condlogic.sv Line: 19
-Info (12128): Elaborating entity "datapath" for hierarchy "datapath:dp" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/arm.sv Line: 16
-Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|mux2:pcmux" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/datapath.sv Line: 20
-Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:pcreg" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/datapath.sv Line: 21
-Info (12128): Elaborating entity "adder" for hierarchy "datapath:dp|adder:pcadd1" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/datapath.sv Line: 22
-Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|mux2:ra1mux" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/datapath.sv Line: 26
-Info (12128): Elaborating entity "regfile" for hierarchy "datapath:dp|regfile:rf" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/datapath.sv Line: 29
-Info (12128): Elaborating entity "extend" for hierarchy "datapath:dp|extend:ext" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/datapath.sv Line: 31
-Info (12128): Elaborating entity "ALU" for hierarchy "datapath:dp|ALU:alu" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/datapath.sv Line: 35
-Info (12128): Elaborating entity "sumadorNbits" for hierarchy "datapath:dp|ALU:alu|sumadorNbits:sumaN" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 16
-Info (12128): Elaborating entity "sumador1bit" for hierarchy "datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[0].sumai" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/sumadorNbits.sv Line: 15
-Info (12128): Elaborating entity "restadorNbits" for hierarchy "datapath:dp|ALU:alu|restadorNbits:restador" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 20
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "arm" for hierarchy "arm:arm" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/top.sv Line: 10
+Info (12128): Elaborating entity "controller" for hierarchy "arm:arm|controller:c" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/arm.sv Line: 13
+Info (12128): Elaborating entity "decoder" for hierarchy "arm:arm|controller:c|decoder:dec" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/controller.sv Line: 16
+Info (12128): Elaborating entity "condlogic" for hierarchy "arm:arm|controller:c|condlogic:cl" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/controller.sv Line: 19
+Info (12128): Elaborating entity "flopenr" for hierarchy "arm:arm|controller:c|condlogic:cl|flopenr:flagreg1" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/condlogic.sv Line: 13
+Info (12128): Elaborating entity "condcheck" for hierarchy "arm:arm|controller:c|condlogic:cl|condcheck:cc" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/condlogic.sv Line: 19
+Info (12128): Elaborating entity "datapath" for hierarchy "arm:arm|datapath:dp" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/arm.sv Line: 16
+Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm|datapath:dp|mux2:pcmux" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/datapath.sv Line: 20
+Info (12128): Elaborating entity "flopr" for hierarchy "arm:arm|datapath:dp|flopr:pcreg" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/datapath.sv Line: 21
+Info (12128): Elaborating entity "adder" for hierarchy "arm:arm|datapath:dp|adder:pcadd1" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/datapath.sv Line: 22
+Info (12128): Elaborating entity "mux2" for hierarchy "arm:arm|datapath:dp|mux2:ra1mux" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/datapath.sv Line: 26
+Info (12128): Elaborating entity "regfile" for hierarchy "arm:arm|datapath:dp|regfile:rf" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/datapath.sv Line: 29
+Info (12128): Elaborating entity "extend" for hierarchy "arm:arm|datapath:dp|extend:ext" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/datapath.sv Line: 31
+Info (12128): Elaborating entity "ALU" for hierarchy "arm:arm|datapath:dp|ALU:alu" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/datapath.sv Line: 35
+Info (12128): Elaborating entity "sumadorNbits" for hierarchy "arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 16
+Info (12128): Elaborating entity "sumador1bit" for hierarchy "arm:arm|datapath:dp|ALU:alu|sumadorNbits:sumaN|sumador1bit:sumador_completo[0].sumai" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/sumadorNbits.sv Line: 15
+Info (12128): Elaborating entity "restadorNbits" for hierarchy "arm:arm|datapath:dp|ALU:alu|restadorNbits:restador" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 20
 Warning (10240): Verilog HDL Always Construct warning at restadorNbits.sv(10): inferring latch(es) for variable "zero", which holds its previous value in one or more paths through the always construct File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/restadorNbits.sv Line: 10
 Warning (10240): Verilog HDL Always Construct warning at restadorNbits.sv(10): inferring latch(es) for variable "negativo", which holds its previous value in one or more paths through the always construct File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/restadorNbits.sv Line: 10
 Info (10041): Inferred latch for "negativo" at restadorNbits.sv(10) File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/restadorNbits.sv Line: 10
 Info (10041): Inferred latch for "zero" at restadorNbits.sv(10) File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/restadorNbits.sv Line: 10
-Info (12128): Elaborating entity "andN" for hierarchy "datapath:dp|ALU:alu|andN:andgate" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 24
-Info (12128): Elaborating entity "orN" for hierarchy "datapath:dp|ALU:alu|orN:orgate" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 28
-Info (12128): Elaborating entity "sllN" for hierarchy "datapath:dp|ALU:alu|sllN:shiftL" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 32
-Info (12128): Elaborating entity "srlN" for hierarchy "datapath:dp|ALU:alu|srlN:shiftR" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 36
-Info (12128): Elaborating entity "xorN" for hierarchy "datapath:dp|ALU:alu|xorN:xorgate" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 40
-Info (12128): Elaborating entity "notN" for hierarchy "datapath:dp|ALU:alu|notN:notgate" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 44
-Info (12128): Elaborating entity "MUX" for hierarchy "datapath:dp|ALU:alu|MUX:muxresult" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 57
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "datapath:dp|regfile:rf|rf" is uninferred due to asynchronous read logic File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/regfile.sv Line: 7
+Info (12128): Elaborating entity "andN" for hierarchy "arm:arm|datapath:dp|ALU:alu|andN:andgate" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 24
+Info (12128): Elaborating entity "orN" for hierarchy "arm:arm|datapath:dp|ALU:alu|orN:orgate" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 28
+Info (12128): Elaborating entity "sllN" for hierarchy "arm:arm|datapath:dp|ALU:alu|sllN:shiftL" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 32
+Info (12128): Elaborating entity "srlN" for hierarchy "arm:arm|datapath:dp|ALU:alu|srlN:shiftR" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 36
+Info (12128): Elaborating entity "xorN" for hierarchy "arm:arm|datapath:dp|ALU:alu|xorN:xorgate" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 40
+Info (12128): Elaborating entity "notN" for hierarchy "arm:arm|datapath:dp|ALU:alu|notN:notgate" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 44
+Info (12128): Elaborating entity "MUX" for hierarchy "arm:arm|datapath:dp|ALU:alu|MUX:muxresult" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/ALU/ALU.sv Line: 57
+Info (12128): Elaborating entity "imem" for hierarchy "imem:imem" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/top.sv Line: 11
+Warning (10850): Verilog HDL warning at imem.sv(7): number of words (23) in memory file does not match the number of elements in the address range [0:63] File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/Memory/imem.sv Line: 7
+Warning (10030): Net "RAM.data_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/Memory/imem.sv Line: 4
+Warning (10030): Net "RAM.waddr_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/Memory/imem.sv Line: 4
+Warning (10030): Net "RAM.we_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/Memory/imem.sv Line: 4
+Info (12128): Elaborating entity "dmem" for hierarchy "dmem:dmem" File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/top.sv Line: 12
+Info (276014): Found 3 instances of uninferred RAM logic
+    Info (276007): RAM logic "dmem:dmem|RAM" is uninferred due to asynchronous read logic File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/Memory/dmem.sv Line: 4
+    Info (276004): RAM logic "imem:imem|RAM" is uninferred due to inappropriate RAM size File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/Memory/imem.sv Line: 4
+    Info (276007): RAM logic "arm:arm|datapath:dp|regfile:rf|rf" is uninferred due to asynchronous read logic File: C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/regfile.sv Line: 7
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/db/ProcessorArm.ram0_imem_37c714.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/ggg/Documents/GitHub/Taller-Digitales/Proyecto/ProcesadorFinal/output_files/ProcessorArm.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1465 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 66 input pins
-    Info (21059): Implemented 97 output pins
-    Info (21061): Implemented 1302 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4848 megabytes
-    Info: Processing ended: Sun Nov 04 01:26:53 2018
-    Info: Elapsed time: 00:00:34
-    Info: Total CPU time (on all processors): 00:00:51
+Info (21057): Implemented 4194 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 65 output pins
+    Info (21061): Implemented 4127 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4856 megabytes
+    Info: Processing ended: Tue Nov 06 20:56:51 2018
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:00:56
 
 
 +------------------------------------------+
