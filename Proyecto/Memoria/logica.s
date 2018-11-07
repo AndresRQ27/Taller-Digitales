@@ -1,8 +1,8 @@
 		MOV		r0,#1024
-		MOV		r1,#1
 		MOV		r2,#280
 		
 inicio
+		LDR		r1,[r0,#12]
 		CMP		r1,#1
 		
 		BLT		inicio
