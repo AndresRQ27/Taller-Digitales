@@ -4,7 +4,7 @@
 // Engineer: Steven Astorga - Steven Avila - Luis Saborio
 // Module Name: Top del sistema de la VGA
 //////////////////////////////////////////////////////////////////////////////////
-module System(
+module VGA(
 			input wire clock,
 			output wire hsync,
 			output wire vsync,
@@ -42,7 +42,7 @@ controladorVGA controladorVGA(
 		.pixelY(py)
 );
 
-Generador generador(
+divisorColor divisorColor(
 		.clock(clock),
 		.pixelX(px), 
 		.pixelY(py),
@@ -52,7 +52,7 @@ Generador generador(
 		.blue(blue)
 );
 
-memoria memoria(
+colorPantalla colorPantalla(
 		.clk(clock),
 		.pixelX(px),
 		.pixelY(py),

@@ -1,4 +1,4 @@
-module memoria(
+module colorPantalla(
 			input clk,
 			input [9:0] pixelX,
 			input [9:0] pixelY,
