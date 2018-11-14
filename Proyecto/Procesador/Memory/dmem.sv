@@ -8,4 +8,5 @@ module dmem(input logic clk, we,
 	always_ff @(posedge clk)
 		if (we) RAM[a[31:2]] <= wd;
 
+	
 endmodule

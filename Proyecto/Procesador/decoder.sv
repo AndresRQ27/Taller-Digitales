@@ -43,14 +43,13 @@ RegW, MemW, Branch, ALUOp} = controls;
 
 	// update flags if S bit is set (C & V only for arith)	
 			FlagW[1] = Funct[0];
-			FlagW[0] = Funct[0] &
-			(ALUControl == 2'b00 | ALUControl == 2'b01);
+			FlagW[0] = Funct[0] & (ALUControl == 2'b00 | ALUControl == 2'b01) & ~(Funct[4:1] == 4'b1010);
 			NoWrite = (Funct[4:1] == 4'b1010);
 				
 			end else begin
 				ALUControl = 2'b00; // add for non-DP instructions
 				FlagW = 2'b00; // don't update Flags
-				NoWrite = 1'b0;
+				NoWrite = 0;
 			end
 	// PC Logic
 	assign PCS = ((Rd == 4'b1111) & RegW) | Branch;

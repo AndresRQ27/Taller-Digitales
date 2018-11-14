@@ -7,4 +7,5 @@ module imem(input logic [31:0] a,
 		$readmemh("memfile.hex",RAM);
 	
 	assign rd = RAM[a[31:2]]; // word aligned
+	
 endmodule
