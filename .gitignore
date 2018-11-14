@@ -1,2 +1,16 @@
 
 vga2\.0/
+
+Proyecto/db/
+
+Proyecto/incremental_db/compiled_partitions/
+
+Proyecto/incremental_db/
+
+Proyecto/output_files/
+
+Proyecto/c5_pin_model_dump\.txt
+
+Proyecto/streetRacing\.qsf
+
+Proyecto/streetRacing\.qws

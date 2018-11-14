@@ -1,20 +1,18 @@
+`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: TEC
 // Engineer: Steven Astorga - Steven Avila - Luis Saborio
 // Module Name: Top del sistema de la VGA
 //////////////////////////////////////////////////////////////////////////////////
 module VGA(
-				input wire clock,
-				input wire [9:0] posicionJugador,
-				input wire [9:0] posicionEnemigo1,
-				input wire [9:0] posicionEnemigo2,
-				output wire hsync,
-				output wire vsync,
-				output wire [7:0] red,
-				output wire [7:0] green,
-				output wire [7:0] blue,
-				output wire blank,
-				output wire clkVGA 
+			input wire clock,
+			output wire hsync,
+			output wire vsync,
+			output wire [7:0] red,
+			output wire [7:0] green,
+			output wire [7:0] blue,
+			output wire blank,
+			output wire clkVGA 
 );
 
 //------------------------------------------
@@ -58,9 +56,6 @@ colorPantalla colorPantalla(
 		.clk(clock),
 		.pixelX(px),
 		.pixelY(py),
-		.posicionJugador(posicionJugador),
-		.posicionEnemigo1(posicionEnemigo1),
-		.posicionEnemigo2(posicionEnemigo2),
 		.dato(dato)
 );
 
