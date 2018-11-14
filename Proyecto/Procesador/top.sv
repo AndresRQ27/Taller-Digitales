@@ -1,10 +1,11 @@
 module top(
-	input logic clk, reset, ps2DataInput,
+	input logic clk, reset,
+	input logic [31:0] ps2DataInput,
 	output logic [31:0] playerData, enemyData1, enemyData2);
 
-	logic [31:0] PC, Instr, ReadData, memData, WriteData, DataAdr;
+	logic [31:0] PC, Instr, ReadData, memData, WriteData, DataAdr, ps2DataOutput;
 	logic wePlayer, weEnemy1, weEnemy2, weMemory, 
-	weP, weE1, weE2, weM, selection, ps2DataOutput;
+	weP, weE1, weE2, weM, selection, MemWrite;
 	
 	
 	//STR sprites eneable
