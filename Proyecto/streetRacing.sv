@@ -1,5 +1,5 @@
 module streetRacing(input FPGACLK,
-							input RESET,
+							input reset,
 							input PS2CLK,
 							input PS2DATA,
 							output wire hsync,
@@ -9,15 +9,17 @@ module streetRacing(input FPGACLK,
 							output wire [7:0] blue,
 							output wire blank,
 							output wire clkVGA, 
-							output [7:0] LED,
-							output [1:0] LED2,
-							output KEY_COUNTER
+							
+							output [1:0] LED2
+							
 );
 
-
-logic [31:0] playerData, enemyData1, enemyData2;
+logic KEY_COUNTER;
+logic [7:0] LED;
 logic [9:0] playerDato, enemyDato1, enemyDato2;
 logic freq_1Hz, freq_jugador;
+
+top ArmProcesor(FPGACLK, ~reset, LED2, playerDato, enemyDato1, enemyDato2);
 
 
 initial begin
@@ -61,7 +63,7 @@ VGA vgacontrol(
 
 divisorFrecuencia1Hz divisor(FPGACLK, freq_1Hz);
 frecuenciaJugador freqjugador(FPGACLK, freq_jugador);
-
+/*
 /// enemydato1
 always_ff @(posedge freq_1Hz) begin 	
 	if (enemyDato1 < 10'd480) begin
@@ -69,6 +71,7 @@ always_ff @(posedge freq_1Hz) begin
 	end // if (enemyDato1 < 10'd480)
 	else enemyDato1 <= 10;
 end
+
 
 /// enemydato2
 always_ff @(posedge freq_1Hz) begin 	
@@ -93,6 +96,6 @@ always_ff @(posedge freq_jugador) begin
 	end // else if (LED2 == 2'b10)
 end
 
-
+*/
 
 endmodule

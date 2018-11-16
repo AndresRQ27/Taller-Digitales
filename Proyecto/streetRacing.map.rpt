@@ -1,0 +1,828 @@
+Analysis & Synthesis report for streetRacing
+Wed Nov 14 11:22:37 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|controller:c|condlogic:cl|flopenr:flagreg1
+ 13. Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|controller:c|condlogic:cl|flopenr:flagreg0
+ 14. Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|mux2:pcmux
+ 15. Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|flopr:pcreg
+ 16. Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|adder:pcadd1
+ 17. Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|adder:pcadd2
+ 18. Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|mux2:ra1mux
+ 19. Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|mux2:ra2mux
+ 20. Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|mux2:resmux
+ 21. Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|mux2:srcbmux
+ 22. Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|ALU:alu
+ 23. Parameter Settings for User Entity Instance: top:ArmProcesor|mux2:mux2
+ 24. Parameter Settings for User Entity Instance: top:ArmProcesor|flopenr:regPlayer
+ 25. Parameter Settings for User Entity Instance: top:ArmProcesor|flopenr:regEnemy1
+ 26. Parameter Settings for User Entity Instance: top:ArmProcesor|flopenr:regEnemy2
+ 27. Parameter Settings for User Entity Instance: top:ArmProcesor|flopr:ps2Data
+ 28. Port Connectivity Checks: "frecuenciaJugador:freqjugador"
+ 29. Port Connectivity Checks: "divisorFrecuencia1Hz:divisor"
+ 30. Port Connectivity Checks: "VGA:vgacontrol|colorPantalla:colorPantalla|carroEnemigo:carroEnemigo2"
+ 31. Port Connectivity Checks: "VGA:vgacontrol|colorPantalla:colorPantalla|carroEnemigo:carroEnemigo1"
+ 32. Port Connectivity Checks: "VGA:vgacontrol|colorPantalla:colorPantalla|carroJugador:carroJugador"
+ 33. Port Connectivity Checks: "Keyboard:teclado"
+ 34. Port Connectivity Checks: "top:ArmProcesor|arm:arm|datapath:dp|mux2:ra1mux"
+ 35. Port Connectivity Checks: "top:ArmProcesor|arm:arm|datapath:dp|adder:pcadd2"
+ 36. Port Connectivity Checks: "top:ArmProcesor|arm:arm|datapath:dp|adder:pcadd1"
+ 37. Port Connectivity Checks: "top:ArmProcesor"
+ 38. Post-Synthesis Netlist Statistics for Top Partition
+ 39. Elapsed Time Per Partition
+ 40. Analysis & Synthesis Messages
+ 41. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Nov 14 11:22:37 2018       ;
+; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                   ; streetRacing                                ;
+; Top-level Entity Name           ; streetRacing                                ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 2704                                        ;
+; Total pins                      ; 34                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; streetRacing       ; streetRacing       ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
++----------------------------------+-----------------+---------------------------------------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                   ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+---------------------------------------------+---------------------------------------------------------------------------------------+---------+
+; Procesador/Memory/imem.sv        ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/Memory/imem.sv     ;         ;
+; Procesador/Memory/dmem.sv        ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/Memory/dmem.sv     ;         ;
+; Procesador/top.sv                ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/top.sv             ;         ;
+; Procesador/regfile.sv            ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/regfile.sv         ;         ;
+; Procesador/mux2.sv               ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/mux2.sv            ;         ;
+; Procesador/flopr.sv              ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/flopr.sv           ;         ;
+; Procesador/flopenr.sv            ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/flopenr.sv         ;         ;
+; Procesador/extend.sv             ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/extend.sv          ;         ;
+; Procesador/decoSTR.sv            ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/decoSTR.sv         ;         ;
+; Procesador/decoLDR.sv            ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/decoLDR.sv         ;         ;
+; Procesador/decoder.sv            ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/decoder.sv         ;         ;
+; Procesador/datapath.sv           ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/datapath.sv        ;         ;
+; Procesador/controller.sv         ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/controller.sv      ;         ;
+; Procesador/condlogic.sv          ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/condlogic.sv       ;         ;
+; Procesador/condcheck.sv          ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/condcheck.sv       ;         ;
+; Procesador/arm.sv                ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/arm.sv             ;         ;
+; Procesador/ALU.sv                ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/ALU.sv             ;         ;
+; Procesador/adder.sv              ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/adder.sv           ;         ;
+; VGA/VGA.sv                       ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/VGA/VGA.sv                    ;         ;
+; VGA/divisorFrecuencia.sv         ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/VGA/divisorFrecuencia.sv      ;         ;
+; VGA/divisorColor.sv              ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/VGA/divisorColor.sv           ;         ;
+; VGA/ControladorVGA.sv            ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/VGA/ControladorVGA.sv         ;         ;
+; VGA/colorPantalla.sv             ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/VGA/colorPantalla.sv          ;         ;
+; Teclado/Keyboard.v               ; yes             ; User Verilog HDL File                       ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Teclado/Keyboard.v            ;         ;
+; Memoria/carroJugador.sv          ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Memoria/carroJugador.sv       ;         ;
+; Memoria/carroEnemigo.sv          ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Memoria/carroEnemigo.sv       ;         ;
+; streetRacing.sv                  ; yes             ; User SystemVerilog HDL File                 ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/streetRacing.sv               ;         ;
+; procesador/memory/memfile.hex    ; yes             ; Auto-Found Hexadecimal (Intel-Format) File  ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/procesador/memory/memfile.hex ;         ;
+; divisorfrecuencia1hz.sv          ; yes             ; Auto-Found SystemVerilog HDL File           ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/divisorfrecuencia1hz.sv       ;         ;
+; frecuenciajugador.sv             ; yes             ; Auto-Found SystemVerilog HDL File           ; C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/frecuenciajugador.sv          ;         ;
++----------------------------------+-----------------+---------------------------------------------+---------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimate of Logic utilization (ALMs needed) ; 2088          ;
+;                                             ;               ;
+; Combinational ALUT usage for logic          ; 1832          ;
+;     -- 7 input functions                    ; 13            ;
+;     -- 6 input functions                    ; 1204          ;
+;     -- 5 input functions                    ; 185           ;
+;     -- 4 input functions                    ; 136           ;
+;     -- <=3 input functions                  ; 294           ;
+;                                             ;               ;
+; Dedicated logic registers                   ; 2704          ;
+;                                             ;               ;
+; I/O pins                                    ; 34            ;
+;                                             ;               ;
+; Total DSP Blocks                            ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; FPGACLK~input ;
+; Maximum fan-out                             ; 2684          ;
+; Total fan-out                               ; 18254         ;
+; Average fan-out                             ; 3.96          ;
++---------------------------------------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                     ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                 ; Entity Name       ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+-------------------+--------------+
+; |streetRacing                         ; 1832 (0)            ; 2704 (0)                  ; 0                 ; 0          ; 34   ; 0            ; |streetRacing                                                                       ; streetRacing      ; work         ;
+;    |Keyboard:teclado|                 ; 47 (47)             ; 51 (51)                   ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|Keyboard:teclado                                                      ; Keyboard          ; work         ;
+;    |VGA:vgacontrol|                   ; 266 (0)             ; 59 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|VGA:vgacontrol                                                        ; VGA               ; work         ;
+;       |colorPantalla:colorPantalla|   ; 230 (107)           ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|VGA:vgacontrol|colorPantalla:colorPantalla                            ; colorPantalla     ; work         ;
+;          |carroEnemigo:carroEnemigo1| ; 45 (45)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|VGA:vgacontrol|colorPantalla:colorPantalla|carroEnemigo:carroEnemigo1 ; carroEnemigo      ; work         ;
+;          |carroEnemigo:carroEnemigo2| ; 43 (43)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|VGA:vgacontrol|colorPantalla:colorPantalla|carroEnemigo:carroEnemigo2 ; carroEnemigo      ; work         ;
+;          |carroJugador:carroJugador|  ; 35 (35)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|VGA:vgacontrol|colorPantalla:colorPantalla|carroJugador:carroJugador  ; carroJugador      ; work         ;
+;       |controladorVGA:controladorVGA| ; 34 (34)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|VGA:vgacontrol|controladorVGA:controladorVGA                          ; controladorVGA    ; work         ;
+;       |divisorColor:divisorColor|     ; 0 (0)               ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|VGA:vgacontrol|divisorColor:divisorColor                              ; divisorColor      ; work         ;
+;       |divisorFrecuencia:clk25MHz|    ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|VGA:vgacontrol|divisorFrecuencia:clk25MHz                             ; divisorFrecuencia ; work         ;
+;    |top:ArmProcesor|                  ; 1519 (26)           ; 2594 (0)                  ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor                                                       ; top               ; work         ;
+;       |arm:arm|                       ; 644 (0)             ; 514 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|arm:arm                                               ; arm               ; work         ;
+;          |controller:c|               ; 17 (0)              ; 2 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|arm:arm|controller:c                                  ; controller        ; work         ;
+;             |condlogic:cl|            ; 8 (3)               ; 2 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|arm:arm|controller:c|condlogic:cl                     ; condlogic         ; work         ;
+;                |condcheck:cc|         ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|arm:arm|controller:c|condlogic:cl|condcheck:cc        ; condcheck         ; work         ;
+;                |flopenr:flagreg1|     ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|arm:arm|controller:c|condlogic:cl|flopenr:flagreg1    ; flopenr           ; work         ;
+;             |decoder:dec|             ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|arm:arm|controller:c|decoder:dec                      ; decoder           ; work         ;
+;          |datapath:dp|                ; 627 (0)             ; 512 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp                                   ; datapath          ; work         ;
+;             |ALU:alu|                 ; 99 (99)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|ALU:alu                           ; ALU               ; work         ;
+;             |adder:pcadd1|            ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|adder:pcadd1                      ; adder             ; work         ;
+;             |adder:pcadd2|            ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|adder:pcadd2                      ; adder             ; work         ;
+;             |extend:ext|              ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|extend:ext                        ; extend            ; work         ;
+;             |flopr:pcreg|             ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|flopr:pcreg                       ; flopr             ; work         ;
+;             |mux2:ra1mux|             ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|mux2:ra1mux                       ; mux2              ; work         ;
+;             |mux2:ra2mux|             ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|mux2:ra2mux                       ; mux2              ; work         ;
+;             |mux2:resmux|             ; 47 (47)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|mux2:resmux                       ; mux2              ; work         ;
+;             |mux2:srcbmux|            ; 29 (29)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|mux2:srcbmux                      ; mux2              ; work         ;
+;             |regfile:rf|              ; 381 (381)           ; 480 (480)                 ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|regfile:rf                        ; regfile           ; work         ;
+;       |decoSTR:decoSTR|               ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|decoSTR:decoSTR                                       ; decoSTR           ; work         ;
+;       |dmem:dmem|                     ; 800 (800)           ; 2048 (2048)               ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|dmem:dmem                                             ; dmem              ; work         ;
+;       |flopenr:regEnemy1|             ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|flopenr:regEnemy1                                     ; flopenr           ; work         ;
+;       |flopenr:regEnemy2|             ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|flopenr:regEnemy2                                     ; flopenr           ; work         ;
+;       |flopenr:regPlayer|             ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|flopenr:regPlayer                                     ; flopenr           ; work         ;
+;       |flopr:ps2Data|                 ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|flopr:ps2Data                                         ; flopr             ; work         ;
+;       |imem:imem|                     ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |streetRacing|top:ArmProcesor|imem:imem                                             ; imem              ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                   ;
++------------------------------------------------------------------------------------+-----------------------------------------------------------------+
+; Register name                                                                      ; Reason for Removal                                              ;
++------------------------------------------------------------------------------------+-----------------------------------------------------------------+
+; top:ArmProcesor|flopr:ps2Data|dataOutput[2..31]                                    ; Stuck at GND due to stuck port data_in                          ;
+; VGA:vgacontrol|colorPantalla:colorPantalla|dato[18,22]                             ; Merged with VGA:vgacontrol|colorPantalla:colorPantalla|dato[17] ;
+; VGA:vgacontrol|colorPantalla:colorPantalla|dato[23]                                ; Merged with VGA:vgacontrol|colorPantalla:colorPantalla|dato[21] ;
+; VGA:vgacontrol|colorPantalla:colorPantalla|dato[8,14]                              ; Merged with VGA:vgacontrol|colorPantalla:colorPantalla|dato[11] ;
+; VGA:vgacontrol|colorPantalla:colorPantalla|dato[9]                                 ; Merged with VGA:vgacontrol|colorPantalla:colorPantalla|dato[10] ;
+; VGA:vgacontrol|colorPantalla:colorPantalla|dato[15]                                ; Merged with VGA:vgacontrol|colorPantalla:colorPantalla|dato[13] ;
+; VGA:vgacontrol|colorPantalla:colorPantalla|dato[7]                                 ; Merged with VGA:vgacontrol|colorPantalla:colorPantalla|dato[0]  ;
+; VGA:vgacontrol|colorPantalla:colorPantalla|dato[2,4,6]                             ; Merged with VGA:vgacontrol|colorPantalla:colorPantalla|dato[1]  ;
+; top:ArmProcesor|arm:arm|controller:c|condlogic:cl|flopenr:flagreg0|dataOutput[0,1] ; Stuck at GND due to stuck port clock_enable                     ;
+; Total Number of Removed Registers = 43                                             ;                                                                 ;
++------------------------------------------------------------------------------------+-----------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2704  ;
+; Number of registers using Synchronous Clear  ; 48    ;
+; Number of registers using Synchronous Load   ; 41    ;
+; Number of registers using Asynchronous Clear ; 546   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2599  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; Keyboard:teclado|PREVIOUS_STATE        ; 8       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |streetRacing|VGA:vgacontrol|controladorVGA:controladorVGA|pixelY[5] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |streetRacing|Keyboard:teclado|CODEWORD[1]                           ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |streetRacing|Keyboard:teclado|COUNT[2]                              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |streetRacing|VGA:vgacontrol|colorPantalla:colorPantalla|dato        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|mux2:srcbmux|y[14] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|mux2:srcbmux|y[0]  ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|mux2:srcbmux|y[7]  ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|mux2:resmux|y[21]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|mux2:resmux|y[1]   ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|mux2:srcbmux|y[8]  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|ALU:alu|result[7]  ;
+; 17:1               ; 32 bits   ; 352 LEs       ; 352 LEs              ; 0 LEs                  ; No         ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|regfile:rf|rd2[3]  ;
+; 17:1               ; 32 bits   ; 352 LEs       ; 352 LEs              ; 0 LEs                  ; No         ; |streetRacing|top:ArmProcesor|arm:arm|datapath:dp|regfile:rf|rd1[14] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|controller:c|condlogic:cl|flopenr:flagreg1 ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; WIDTH          ; 2     ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|controller:c|condlogic:cl|flopenr:flagreg0 ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------+
+; WIDTH          ; 2     ; Signed Integer                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|mux2:pcmux ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|flopr:pcreg ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|adder:pcadd1 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|adder:pcadd2 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|mux2:ra1mux ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|mux2:ra2mux ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|mux2:resmux ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|mux2:srcbmux ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:ArmProcesor|arm:arm|datapath:dp|ALU:alu ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; width          ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:ArmProcesor|mux2:mux2 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:ArmProcesor|flopenr:regPlayer ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:ArmProcesor|flopenr:regEnemy1 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:ArmProcesor|flopenr:regEnemy2 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: top:ArmProcesor|flopr:ps2Data ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "frecuenciaJugador:freqjugador"                                                         ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; clk_1Hz ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFrecuencia1Hz:divisor"                                                          ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; clk_1Hz ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGA:vgacontrol|colorPantalla:colorPantalla|carroEnemigo:carroEnemigo2"                                                                                                             ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; posX ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGA:vgacontrol|colorPantalla:colorPantalla|carroEnemigo:carroEnemigo1"                                                                                                             ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; posX ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGA:vgacontrol|colorPantalla:colorPantalla|carroJugador:carroJugador"                                                                                                              ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                             ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; posY ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keyboard:teclado"                                                                          ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; LED         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; KEY_COUNTER ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:ArmProcesor|arm:arm|datapath:dp|mux2:ra1mux" ;
++------+-------+----------+---------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                           ;
++------+-------+----------+---------------------------------------------------+
+; d1   ; Input ; Info     ; Stuck at VCC                                      ;
++------+-------+----------+---------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:ArmProcesor|arm:arm|datapath:dp|adder:pcadd2" ;
++----------+-------+----------+------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                        ;
++----------+-------+----------+------------------------------------------------+
+; b[31..3] ; Input ; Info     ; Stuck at GND                                   ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND                                   ;
+; b[2]     ; Input ; Info     ; Stuck at VCC                                   ;
++----------+-------+----------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:ArmProcesor|arm:arm|datapath:dp|adder:pcadd1" ;
++----------+-------+----------+------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                        ;
++----------+-------+----------+------------------------------------------------+
+; b[31..3] ; Input ; Info     ; Stuck at GND                                   ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND                                   ;
+; b[2]     ; Input ; Info     ; Stuck at VCC                                   ;
++----------+-------+----------+------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:ArmProcesor"                                                                                                                                               ;
++--------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                                                                                                ;
++--------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; ps2DataInput ; Input  ; Warning  ; Input port expression (2 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "ps2DataInput[31..2]" will be connected to GND. ;
+; playerData   ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (10 bits) it drives; bit(s) "playerData[31..10]" have no fanouts                      ;
+; enemyData1   ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (10 bits) it drives; bit(s) "enemyData1[31..10]" have no fanouts                      ;
+; enemyData2   ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (10 bits) it drives; bit(s) "enemyData2[31..10]" have no fanouts                      ;
++--------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 2704                        ;
+;     CLR               ; 2                           ;
+;     CLR SLD           ; 30                          ;
+;     ENA               ; 2063                        ;
+;     ENA CLR           ; 514                         ;
+;     ENA SCLR          ; 22                          ;
+;     SCLR              ; 26                          ;
+;     SLD               ; 11                          ;
+;     plain             ; 36                          ;
+; arriav_lcell_comb     ; 1832                        ;
+;     arith             ; 188                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 122                         ;
+;         2 data inputs ; 3                           ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 58                          ;
+;     extend            ; 13                          ;
+;         7 data inputs ; 13                          ;
+;     normal            ; 1610                        ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 77                          ;
+;         3 data inputs ; 67                          ;
+;         4 data inputs ; 132                         ;
+;         5 data inputs ; 127                         ;
+;         6 data inputs ; 1204                        ;
+;     shared            ; 21                          ;
+;         2 data inputs ; 21                          ;
+; boundary_port         ; 34                          ;
+;                       ;                             ;
+; Max LUT depth         ; 12.50                       ;
+; Average LUT depth     ; 6.95                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:11     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Wed Nov 14 11:22:05 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off streetRacing -c streetRacing
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/memory/imem.sv
+    Info (12023): Found entity 1: imem File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/Memory/imem.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/memory/dmem.sv
+    Info (12023): Found entity 1: dmem File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/Memory/dmem.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/top.sv
+    Info (12023): Found entity 1: top File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/top.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/testbench.sv
+    Info (12023): Found entity 1: testbench File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/testbench.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/regfile.sv
+    Info (12023): Found entity 1: regfile File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/regfile.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/mux2.sv
+    Info (12023): Found entity 1: mux2 File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/mux2.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/flopr.sv
+    Info (12023): Found entity 1: flopr File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/flopr.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/flopenr.sv
+    Info (12023): Found entity 1: flopenr File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/flopenr.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/extend.sv
+    Info (12023): Found entity 1: extend File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/extend.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/decostr.sv
+    Info (12023): Found entity 1: decoSTR File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/decoSTR.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/decoldr.sv
+    Info (12023): Found entity 1: decoLDR File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/decoLDR.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/decoder.sv
+    Info (12023): Found entity 1: decoder File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/decoder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/datapath.sv
+    Info (12023): Found entity 1: datapath File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/datapath.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/controller.sv
+    Info (12023): Found entity 1: controller File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/controller.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/condlogic.sv
+    Info (12023): Found entity 1: condlogic File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/condlogic.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/condcheck.sv
+    Info (12023): Found entity 1: condcheck File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/condcheck.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/arm.sv
+    Info (12023): Found entity 1: arm File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/arm.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/alu.sv
+    Info (12023): Found entity 1: ALU File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/ALU.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file procesador/adder.sv
+    Info (12023): Found entity 1: adder File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/adder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file topproyect.sv
+    Info (12023): Found entity 1: topProyect File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/topProyect.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vga/vga.sv
+    Info (12023): Found entity 1: VGA File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/VGA/VGA.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file vga/divisorfrecuencia.sv
+    Info (12023): Found entity 1: divisorFrecuencia File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/VGA/divisorFrecuencia.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file vga/divisorcolor.sv
+    Info (12023): Found entity 1: divisorColor File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/VGA/divisorColor.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vga/controladorvga.sv
+    Info (12023): Found entity 1: controladorVGA File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/VGA/ControladorVGA.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file vga/colorpantalla.sv
+    Info (12023): Found entity 1: colorPantalla File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/VGA/colorPantalla.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file teclado/wrapper.v
+    Info (12023): Found entity 1: wrapper File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Teclado/wrapper.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file teclado/keyboard.v
+    Info (12023): Found entity 1: Keyboard File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Teclado/Keyboard.v Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file memoria/memoria.sv
+    Info (12023): Found entity 1: memoria File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Memoria/memoria.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memoria/carrojugador.sv
+    Info (12023): Found entity 1: carroJugador File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Memoria/carroJugador.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memoria/carroenemigo.sv
+    Info (12023): Found entity 1: carroEnemigo File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Memoria/carroEnemigo.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file streetracing.sv
+    Info (12023): Found entity 1: streetRacing File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/streetRacing.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at topProyect.sv(30): created implicit net for "clock" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/topProyect.sv Line: 30
+Info (12127): Elaborating entity "streetRacing" for the top level hierarchy
+Info (12128): Elaborating entity "top" for hierarchy "top:ArmProcesor" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/streetRacing.sv Line: 22
+Info (12128): Elaborating entity "arm" for hierarchy "top:ArmProcesor|arm:arm" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/top.sv Line: 22
+Info (12128): Elaborating entity "controller" for hierarchy "top:ArmProcesor|arm:arm|controller:c" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/arm.sv Line: 13
+Info (12128): Elaborating entity "decoder" for hierarchy "top:ArmProcesor|arm:arm|controller:c|decoder:dec" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/controller.sv Line: 16
+Info (12128): Elaborating entity "condlogic" for hierarchy "top:ArmProcesor|arm:arm|controller:c|condlogic:cl" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/controller.sv Line: 19
+Info (12128): Elaborating entity "flopenr" for hierarchy "top:ArmProcesor|arm:arm|controller:c|condlogic:cl|flopenr:flagreg1" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/condlogic.sv Line: 13
+Info (12128): Elaborating entity "condcheck" for hierarchy "top:ArmProcesor|arm:arm|controller:c|condlogic:cl|condcheck:cc" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/condlogic.sv Line: 19
+Info (12128): Elaborating entity "datapath" for hierarchy "top:ArmProcesor|arm:arm|datapath:dp" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/arm.sv Line: 16
+Info (12128): Elaborating entity "mux2" for hierarchy "top:ArmProcesor|arm:arm|datapath:dp|mux2:pcmux" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/datapath.sv Line: 20
+Info (12128): Elaborating entity "flopr" for hierarchy "top:ArmProcesor|arm:arm|datapath:dp|flopr:pcreg" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/datapath.sv Line: 21
+Info (12128): Elaborating entity "adder" for hierarchy "top:ArmProcesor|arm:arm|datapath:dp|adder:pcadd1" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/datapath.sv Line: 22
+Info (12128): Elaborating entity "mux2" for hierarchy "top:ArmProcesor|arm:arm|datapath:dp|mux2:ra1mux" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/datapath.sv Line: 26
+Info (12128): Elaborating entity "regfile" for hierarchy "top:ArmProcesor|arm:arm|datapath:dp|regfile:rf" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/datapath.sv Line: 29
+Info (12128): Elaborating entity "extend" for hierarchy "top:ArmProcesor|arm:arm|datapath:dp|extend:ext" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/datapath.sv Line: 31
+Info (12128): Elaborating entity "ALU" for hierarchy "top:ArmProcesor|arm:arm|datapath:dp|ALU:alu" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/datapath.sv Line: 35
+Info (12128): Elaborating entity "imem" for hierarchy "top:ArmProcesor|imem:imem" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/top.sv Line: 25
+Warning (10850): Verilog HDL warning at imem.sv(7): number of words (20) in memory file does not match the number of elements in the address range [0:63] File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/Memory/imem.sv Line: 7
+Warning (10030): Net "RAM.data_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/Memory/imem.sv Line: 4
+Warning (10030): Net "RAM.waddr_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/Memory/imem.sv Line: 4
+Warning (10030): Net "RAM.we_a" at imem.sv(4) has no driver or initial value, using a default initial value '0' File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/Memory/imem.sv Line: 4
+Info (12128): Elaborating entity "decoSTR" for hierarchy "top:ArmProcesor|decoSTR:decoSTR" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/top.sv Line: 29
+Info (12128): Elaborating entity "decoLDR" for hierarchy "top:ArmProcesor|decoLDR:decoLDR" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/top.sv Line: 30
+Info (12128): Elaborating entity "flopenr" for hierarchy "top:ArmProcesor|flopenr:regPlayer" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/top.sv Line: 35
+Info (12128): Elaborating entity "dmem" for hierarchy "top:ArmProcesor|dmem:dmem" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/top.sv Line: 39
+Info (12128): Elaborating entity "Keyboard" for hierarchy "Keyboard:teclado" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/streetRacing.sv Line: 39
+Warning (10036): Verilog HDL or VHDL warning at Keyboard.v(43): object "PREVIOUS_KEY" assigned a value but never read File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Teclado/Keyboard.v Line: 43
+Warning (10230): Verilog HDL assignment warning at Keyboard.v(72): truncated value with size 32 to match size of target (8) File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Teclado/Keyboard.v Line: 72
+Warning (10230): Verilog HDL assignment warning at Keyboard.v(84): truncated value with size 32 to match size of target (12) File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Teclado/Keyboard.v Line: 84
+Warning (10230): Verilog HDL assignment warning at Keyboard.v(98): truncated value with size 32 to match size of target (4) File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Teclado/Keyboard.v Line: 98
+Warning (10230): Verilog HDL assignment warning at Keyboard.v(145): truncated value with size 32 to match size of target (8) File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Teclado/Keyboard.v Line: 145
+Warning (10230): Verilog HDL assignment warning at Keyboard.v(150): truncated value with size 32 to match size of target (8) File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Teclado/Keyboard.v Line: 150
+Info (12128): Elaborating entity "VGA" for hierarchy "VGA:vgacontrol" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/streetRacing.sv Line: 58
+Info (12128): Elaborating entity "divisorFrecuencia" for hierarchy "VGA:vgacontrol|divisorFrecuencia:clk25MHz" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/VGA/VGA.sv Line: 36
+Info (12128): Elaborating entity "controladorVGA" for hierarchy "VGA:vgacontrol|controladorVGA:controladorVGA" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/VGA/VGA.sv Line: 45
+Info (12128): Elaborating entity "divisorColor" for hierarchy "VGA:vgacontrol|divisorColor:divisorColor" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/VGA/VGA.sv Line: 55
+Warning (10230): Verilog HDL assignment warning at divisorColor.sv(14): truncated value with size 16 to match size of target (8) File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/VGA/divisorColor.sv Line: 14
+Info (12128): Elaborating entity "colorPantalla" for hierarchy "VGA:vgacontrol|colorPantalla:colorPantalla" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/VGA/VGA.sv Line: 65
+Info (12128): Elaborating entity "carroJugador" for hierarchy "VGA:vgacontrol|colorPantalla:colorPantalla|carroJugador:carroJugador" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/VGA/colorPantalla.sv Line: 48
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "sprite" into its bus
+Info (12128): Elaborating entity "carroEnemigo" for hierarchy "VGA:vgacontrol|colorPantalla:colorPantalla|carroEnemigo:carroEnemigo1" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/VGA/colorPantalla.sv Line: 55
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "sprite" into its bus
+Warning (12125): Using design file divisorfrecuencia1hz.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: divisorFrecuencia1Hz File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/divisorfrecuencia1hz.sv Line: 1
+Info (12128): Elaborating entity "divisorFrecuencia1Hz" for hierarchy "divisorFrecuencia1Hz:divisor" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/streetRacing.sv Line: 64
+Warning (10230): Verilog HDL assignment warning at divisorfrecuencia1hz.sv(14): truncated value with size 32 to match size of target (26) File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/divisorfrecuencia1hz.sv Line: 14
+Warning (10230): Verilog HDL assignment warning at divisorfrecuencia1hz.sv(20): truncated value with size 32 to match size of target (26) File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/divisorfrecuencia1hz.sv Line: 20
+Warning (12125): Using design file frecuenciajugador.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: frecuenciaJugador File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/frecuenciajugador.sv Line: 1
+Info (12128): Elaborating entity "frecuenciaJugador" for hierarchy "frecuenciaJugador:freqjugador" File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/streetRacing.sv Line: 65
+Warning (10230): Verilog HDL assignment warning at frecuenciajugador.sv(14): truncated value with size 32 to match size of target (24) File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/frecuenciajugador.sv Line: 14
+Warning (10230): Verilog HDL assignment warning at frecuenciajugador.sv(20): truncated value with size 32 to match size of target (24) File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/frecuenciajugador.sv Line: 20
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276007): RAM logic "top:ArmProcesor|dmem:dmem|RAM" is uninferred due to asynchronous read logic File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/Memory/dmem.sv Line: 4
+    Info (276004): RAM logic "top:ArmProcesor|imem:imem|RAM" is uninferred due to inappropriate RAM size File: C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/Procesador/Memory/imem.sv Line: 4
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/db/streetRacing.ram0_imem_37c714.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/streetRacing.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 4512 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 30 output pins
+    Info (21061): Implemented 4478 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4854 megabytes
+    Info: Processing ended: Wed Nov 14 11:22:37 2018
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:00:56
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Alexis/Documents/TEC/Taller-Digitales/Proyecto/streetRacing.map.smsg.
+
+
