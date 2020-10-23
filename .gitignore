@@ -5,12 +5,28 @@ Proyecto/db/
 
 Proyecto/incremental_db/compiled_partitions/
 
-Proyecto/incremental_db/
-
-Proyecto/output_files/
-
 Proyecto/c5_pin_model_dump\.txt
 
 Proyecto/streetRacing\.qsf
 
 Proyecto/streetRacing\.qws
+
+# Files extensions to ignore
+**/*.bak
+**/*.done
+**/*.rpt
+**/*.smsg
+**/*.summary
+**/*.qpf
+**/*.qsf
+**/*.qws
+**/*.sft
+**/*.svo
+**/*.xrf
+
+# Folders to ignore
+**/db
+**/incremental_db
+**/output_files
+
+**/c5_pin_model_dump.txt

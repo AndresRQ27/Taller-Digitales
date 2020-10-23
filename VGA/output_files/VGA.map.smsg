@@ -1,1 +1,0 @@
-Warning (10268): Verilog HDL information at ClkDivisor.sv(8): always construct contains both blocking and non-blocking assignments File: C:/Users/andre/Documents/TEC/Taller-Digitales/VGA/ClkDivisor.sv Line: 8
